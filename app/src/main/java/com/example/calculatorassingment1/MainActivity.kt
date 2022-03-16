@@ -41,8 +41,15 @@ class MainActivity : AppCompatActivity() {
         btnDiv.setOnClickListener {
             val number1:Int= Integer.parseInt(number1.text.toString())
             val number2:Int= Integer.parseInt(number2.text.toString())
-            val iresult = number1/number2
-            result.text=iresult.toString()
+            if (number2 > 0 ){
+                val iresult = number1/number2
+                result.text=iresult.toString()
+
+            } else {
+                val iresult = 0
+                result.text=iresult.toString()
+            }
+
         }
 
     }
